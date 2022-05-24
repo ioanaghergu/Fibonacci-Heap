@@ -33,7 +33,7 @@ Insertion creates a new tree containing only the new node which is being added t
 ![image](https://user-images.githubusercontent.com/101597846/170057901-34afcc9e-f6fb-40c6-8836-805a34f308cd.png)
 
 
-<font size = 100>**2.Union**</font>
+<font size = 100>**2. Union**</font>
 
 Union concatenates the root lists of two Fibonacci heaps and sets the minimum node to which ever tree’s minimum node is smaller.
 Union of two Fibonacci heaps H1 and H2 can be accomplished as follows: 
@@ -47,11 +47,11 @@ Union of two Fibonacci heaps H1 and H2 can be accomplished as follows:
     H(min) = H2(min).
 ```
 
-<font size = 100>**3.Decrease key**</font>
+<font size = 100>**3. Decrease key**</font>
 
 Decrease key lowers the key of a node. The node is then cut from the tree, joining the root list as its own tree. The parent of the node is then cut if it is marked, this continues for each anscestor until a parent that is not marked is encountered, which is then marked. The pointer to the minimum node is then updated if the node’s new value is less than the current minimum.
 
-<font size = 100>**4.Extract minimum**</font>
+<font size = 100>**4. Extract minimum**</font>
 
 Extract minimum is the most complex operation of a Fibonacci Heap as it’s where the actions that were deferred by the other operations occur. It starts by removing the minimum node from the root list and adding its children to the root list.
 
@@ -82,6 +82,6 @@ If the minimum was the only node in the root list, the pointer to the minimum no
 
 If not, the ‘consolidate’ operation is performed which merges all trees of the same order together until there are no two trees of the same order. The minimum is then set to the smallest node in the root list.
 
-	<font size = 100>**5. Delete**</font>
+<font size = 100>**5. Delete**</font>
 
 Delete is performed by calling decrease key to reduce the node to negative infinity which pulls the node to the top of the tree. Extract minimum is then called on the node to remove it from the heap.
