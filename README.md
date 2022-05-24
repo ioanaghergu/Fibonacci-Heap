@@ -39,7 +39,7 @@ Union of two Fibonacci heaps H1 and H2 can be accomplished as follows:
 ```
 1) Join root lists of Fibonacci heaps H1 and H2 and make a single Fibonacci heap H.
 2) If H1(min) < H2(min) then: 
-		H(min) = H1(min).
+	H(min) = H1(min).
 3) Else: 
     H(min) = H2(min).
 ```
