@@ -1,10 +1,10 @@
 # Fibonacci-Heap
 
-<h1> Introduction </h1>
+<h2> Introduction </h2>
 
 A Fibonacci heap is a heap data structure similar to the binomial heap, only with a few modifications and a looser structure. The Fibonacci heap was designed in order to improve Dijkstra’s shortest path algorithm from O(m logn)O(m logn) to O(m + nlogn)O(m + nlogn) by optimising the operations used most by the algorithm. Its name derives from the fact that the Fibonacci sequence is used in the complexity analysis of its operations.
 
-<h1> Structure and Time Complexity </h1>
+<h2> Structure and Time Complexity </h2>
 
 Like the binomial heap, a Fibonacci heap is a collection of heap-ordered trees. They do not need to be binomial trees however, this is where the relaxation of some of the binomial heap’s properties comes in.
 
@@ -17,14 +17,14 @@ Each tree has an order just like the binomial heap that is based on the number o
 ![image](https://user-images.githubusercontent.com/101597846/170062073-d05b9758-f198-40fa-9932-f1a6d6e1b66f.png)
 
 
-<h2> Links </h2>
+<h3> Links </h3>
 
 The pointers between nodes in a Fibonacci heap are very similar to that of the binomial heap, only that each node in a Fibonacci heap contains a doubly linked list of all its children. This allows node removal and child list concatenation to both be performed in linear time. The child node whose parent links to it is always the node with the smallest value among its siblings.
 
 ![image](https://user-images.githubusercontent.com/101597846/170057482-90225467-e5c4-490c-b806-33a3adef1435.png)
 
 
-<h1> Methods </h1>
+<h2> Methods </h2>
 
 <font size = "100"> **1. Insertion** </font>
 
